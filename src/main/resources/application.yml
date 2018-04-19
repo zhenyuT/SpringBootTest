@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: false
+#    prefix: classpath:/templates/
+#    prefix: /templates/
+#    suffix: .html
+
+test.value: 哈哈

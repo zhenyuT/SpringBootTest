@@ -1,0 +1,87 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.tianzy.test</groupId>
+  <artifactId>SpringBootTest2.0-admin</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>SpringBootTest2.0 Maven Webapp</name>
+  <!--<url>http://maven.apache.org</url>-->
+
+  <parent>
+    <groupId>cn.tianzy.test</groupId>
+    <artifactId>SpringBootTest2.0-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+
+    <!--<dependency>-->
+      <!--<groupId>cn.tianzy.test</groupId>-->
+      <!--<artifactId>SpringBootTest2.0-parent</artifactId>-->
+      <!--<version>1.0-SNAPSHOT</version>-->
+      <!--<type>pom</type>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>cn.tianzy.test</groupId>
+      <artifactId>SpringBootTest2.0-sys</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+
+    <!-- Provided -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+    </dependency>
+
+
+    <!--<dependency>-->
+      <!--<groupId>junit</groupId>-->
+      <!--<artifactId>junit</artifactId>-->
+      <!--<version>3.8.1</version>-->
+      <!--<scope>test</scope>-->
+    <!--</dependency>-->
+
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-devtools</artifactId>-->
+      <!--<optional>true</optional>-->
+    <!--</dependency>-->
+
+  </dependencies>
+
+
+  <build>
+    <finalName>SpringBootTest2.0</finalName>
+
+    <!-- 此配置必须 -->
+    <resources>
+      <resource>
+        <directory>src/main/webapp/resources</directory>
+        <targetPath>META-INF/resources/</targetPath>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/webapp/templates</directory>
+        <targetPath>templates</targetPath>
+      </resource>
+    </resources>
+
+  </build>
+</project>
